@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\api",
+    "\\api\\bin",
+    "\\api\\bin\\Debug",
+    "\\api\\bin\\Release",
+    "\\api\\Controllers",
+    "\\api\\DTO",
+    "\\api\\Service"
+  ],
+  "SelectedNode": "\\Fins.sln",
+  "PreviewInSolutionExplorer": false
+}
