@@ -80,6 +80,17 @@ namespace api.Controllers
         [Route("{id:int}")]
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateReviewDTO updateDto)
         {
+             var username = User.GetUsername();          
+             var reviewget = await _reviewRepo.GetByIdAsync(id);
+             var reviewusname=  reviewget.Buyer.UserName;
+
+             if(username!=reviewusname)
+             {
+                return  BadRequest("You cannot change another peoples review");
+             }
+            
+
+
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
